@@ -1,0 +1,126 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1608889175250-c3b0c1667d3a') center/cover no-repeat fixed;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.45);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: .2s;
+}
+
+.nav a:hover {
+  color: #9fdcff;
+  transform: scale(1.1);
+}
+
+.hero {
+  min-height: 100vh;
+  padding-top: 130px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: .9;
+}
+
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.card {
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(8px);
+}
+
+.server-box {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.status {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.status.online {
+  color: #6dff9f;
+}
+
+.btn {
+  padding: 15px 42px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+  color: #fff;
+  transition: .15s;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 18px #6dd5fa;
+}
+
+.telegram {
+  font-size: 20px;
+  color: #9fdcff;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 30px;
+  background: rgba(0,0,0,0.55);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .nav a { font-size: 16px; margin-left: 15px; }
+}
