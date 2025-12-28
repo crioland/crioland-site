@@ -2,48 +2,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CrioLand — Ванильное выживание</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>CrioLand — Top Bedrock Server</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<script defer src="script.js"></script>
 </head>
 <body>
-  <canvas id="snow"></canvas>
+<div class="bg"></div>
+<div class="overlay"></div>
+<div class="snow"></div>
 
-  <header class="header">
-    <div class="logo">❄ CrioLand</div>
-    <nav class="nav">
-      <a href="#home">Главная</a>
-      <a href="#server">Сервер</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
-  </header>
+<header class="hero">
+  <h1 class="logo">CRIO<span>LAND</span></h1>
+  <p class="subtitle">TOP BEDROCK SERVER</p>
+  <div id="online" class="online">Загрузка...</div>
+  <div class="buttons">
+    <button onclick="copyIP()">Скопировать IP</button>
+    <a href="play.html" class="secondary">Начать играть</a>
+  </div>
+</header>
 
-  <section id="home" class="hero">
-    <h1>CrioLand</h1>
-    <p>Ванильное выживание · Атмосфера · Комфорт</p>
-    <button class="btn">Начать играть</button>
-  </section>
+<section class="cards">
+  <a class="card hidden" href="play.html">🎮<h3>Как начать</h3><p>Подключение и версии</p></a>
+  <a class="card hidden" href="donate.html">🛒<h3>Магазин</h3><p>Привилегии и бонусы</p></a>
+  <a class="card hidden" href="rules.html">📜<h3>Правила</h3><p>Комфортная игра</p></a>
+</section>
 
-  <section id="server" class="section card">
-    <h2>Информация о сервере</h2>
-    <div class="server-box">
-      <p><b>IP:</b> 195.133.2.175</p>
-      <p><b>Порт:</b> 19132</p>
-      <p><b>Режим:</b> Выживание (Vanilla)</p>
-      <p class="status online">● Сервер онлайн</p>
-    </div>
-  </section>
-
-  <section id="contacts" class="section">
-    <h2>Контакты</h2>
-    <a class="telegram" href="https://t.me/ransomh" target="_blank">t.me/ransomh</a>
-  </section>
-
-  <footer class="footer">
-    © 2025 CrioLand
-  </footer>
-
-  <script src="snow.js"></script>
+<footer>© 2025 CrioLand</footer>
 </body>
 </html>
