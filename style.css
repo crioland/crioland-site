@@ -1,111 +1,126 @@
 
-body{
- margin:0;
- font-family: 'Segoe UI', sans-serif;
- background: radial-gradient(circle at top, #1a2a4f, #050b18);
- color:#fff;
- overflow-x:hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.top-nav{
- position:fixed;
- top:0;
- width:100%;
- padding:15px 50px;
- display:flex;
- justify-content:space-between;
- align-items:center;
- background:rgba(5,10,20,.7);
- backdrop-filter: blur(8px);
- z-index:10;
+body {
+  background: url('https://images.unsplash.com/photo-1608889175250-c3b0c1667d3a') center/cover no-repeat fixed;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-.logo{
- font-size:22px;
- font-weight:700;
- letter-spacing:2px;
+#snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.top-nav a{
- margin-left:25px;
- text-decoration:none;
- color:#cfe9ff;
- transition:.3s;
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.45);
+  z-index: 10;
 }
 
-.top-nav a:hover{
- color:#7dd3ff;
+.logo {
+  font-size: 26px;
+  font-weight: bold;
 }
 
-.hero{
- height:100vh;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- text-align:center;
+.nav a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: .2s;
 }
 
-.subtitle{
- opacity:.8;
+.nav a:hover {
+  color: #9fdcff;
+  transform: scale(1.1);
 }
 
-.status{
- margin-top:15px;
- font-size:18px;
+.hero {
+  min-height: 100vh;
+  padding-top: 130px;
+  text-align: center;
 }
 
-.buttons{
- margin-top:25px;
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
 }
 
-.btn{
- padding:12px 28px;
- border-radius:12px;
- border:none;
- cursor:pointer;
- background:#4fc3f7;
- color:#000;
- font-size:15px;
- margin:0 10px;
- transition:.25s;
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: .9;
 }
 
-.btn:hover{
- transform:translateY(-3px) scale(1.03);
- box-shadow:0 10px 25px rgba(79,195,247,.6);
+.section {
+  padding: 100px 20px;
+  text-align: center;
 }
 
-.btn.ghost{
- background:transparent;
- color:#7dd3ff;
- border:1px solid #7dd3ff;
+.card {
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(8px);
 }
 
-.block{
- padding:120px 60px;
- text-align:center;
+.server-box {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.8;
 }
 
-.block.dark{
- background:rgba(255,255,255,.03);
+.status {
+  margin-top: 15px;
+  font-weight: bold;
 }
 
-.telegram{
- font-size:18px;
- color:#7dd3ff;
+.status.online {
+  color: #6dff9f;
 }
 
-.snow{
- position:fixed;
- inset:0;
- background-image:url("https://i.imgur.com/5b3F8Jp.png");
- animation:snow 18s linear infinite;
- opacity:.35;
- pointer-events:none;
+.btn {
+  padding: 15px 42px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+  color: #fff;
+  transition: .15s;
 }
 
-@keyframes snow{
- from{background-position:0 0}
- to{background-position:0 1000px}
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 18px #6dd5fa;
+}
+
+.telegram {
+  font-size: 20px;
+  color: #9fdcff;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 30px;
+  background: rgba(0,0,0,0.55);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .nav a { font-size: 16px; margin-left: 15px; }
 }

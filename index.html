@@ -2,69 +2,48 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Criolands — Minecraft</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrioLand — Ванильное выживание</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <canvas id="snow"></canvas>
 
-<audio id="bgSound" src="winter.mp3" loop></audio>
+  <header class="header">
+    <div class="logo">❄ CrioLand</div>
+    <nav class="nav">
+      <a href="#home">Главная</a>
+      <a href="#server">Сервер</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
 
-<div class="snow"></div>
+  <section id="home" class="hero">
+    <h1>CrioLand</h1>
+    <p>Ванильное выживание · Атмосфера · Комфорт</p>
+    <button class="btn">Начать играть</button>
+  </section>
 
-<header class="top-nav">
-  <div class="logo">CRIOLANDS</div>
-  <nav>
-    <a href="#about">О сервере</a>
-    <a href="#shop">Донат</a>
-    <a href="#contacts">Контакты</a>
-  </nav>
-</header>
+  <section id="server" class="section card">
+    <h2>Информация о сервере</h2>
+    <div class="server-box">
+      <p><b>IP:</b> 195.133.2.175</p>
+      <p><b>Порт:</b> 19132</p>
+      <p><b>Режим:</b> Выживание (Vanilla)</p>
+      <p class="status online">● Сервер онлайн</p>
+    </div>
+  </section>
 
-<section class="hero">
-  <h1>Minecraft сервер</h1>
-  <p class="subtitle">Зимний вайб • PvP • Выживание</p>
-  <div class="status">
-    Онлайн: <span id="online">Загрузка...</span>
-  </div>
-  <div class="buttons">
-    <button class="btn" onclick="copyIP()">Скопировать IP</button>
-    <button class="btn ghost" onclick="toggleSound()">Звук ❄️</button>
-  </div>
-</section>
+  <section id="contacts" class="section">
+    <h2>Контакты</h2>
+    <a class="telegram" href="https://t.me/ransomh" target="_blank">t.me/ransomh</a>
+  </section>
 
-<section id="about" class="block">
-  <h2>О сервере</h2>
-  <p>Атмосферный сервер в стиле FunTime с уютной зимней атмосферой.</p>
-</section>
+  <footer class="footer">
+    © 2025 CrioLand
+  </footer>
 
-<section id="shop" class="block dark">
-  <h2>Донат</h2>
-  <a href="#" class="btn">Перейти в магазин</a>
-</section>
-
-<section id="contacts" class="block">
-  <h2>Контакты</h2>
-  <a href="https://t.me/ransomh" target="_blank" class="telegram">t.me/ransomh</a>
-</section>
-
-<script>
-function copyIP(){
-  navigator.clipboard.writeText("play.criolands.ru");
-}
-
-function toggleSound(){
-  const s = document.getElementById("bgSound");
-  s.paused ? s.play() : s.pause();
-}
-
-fetch("https://api.mcsrvstat.us/2/play.criolands.ru")
-.then(r=>r.json())
-.then(d=>{
- document.getElementById("online").innerText =
-  d.online ? d.players.online + " / " + d.players.max : "OFFLINE";
-});
-</script>
-
+  <script src="snow.js"></script>
 </body>
 </html>
